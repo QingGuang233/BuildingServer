@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AccountWarehouseClient.iml" filepath="$PROJECT_DIR$/AccountWarehouseClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Libs/ICommandExecutor/ICommandExecutor.iml" filepath="$PROJECT_DIR$/Libs/ICommandExecutor/ICommandExecutor.iml" />
+    </modules>
+  </component>
+</project>

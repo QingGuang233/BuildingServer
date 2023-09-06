@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehousePacket/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="AccountWarehouse" />
+        <module name="RemoteCodePacket" />
+        <module name="PBClient" />
+        <module name="RemoteCodeServer" />
+        <module name="AccountWarehouseServer" />
+        <module name="AccountWarehousePacket" />
+        <module name="PBServer" />
+        <module name="RemoteCodeClient" />
+        <module name="PBPacket" />
+        <module name="AccountWarehouseClient" />
+        <module name="ICommandExecutor" />
+        <module name="Plugins" />
+        <module name="Tokens" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CommandExecutor" target="1.8" />
+      <module name="CommandHandleHelper" target="8" />
+      <module name="Plugin" target="1.8" />
+      <module name="TestCode" target="1.8" />
+      <module name="TestCodeClient" target="1.8" />
+      <module name="YggdrasilServerImpl" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

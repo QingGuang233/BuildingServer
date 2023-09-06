@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Client/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/ICommandExecutor" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/ICommandExecutor/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/ICommandExecutor/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/PacketBasedTCP" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/PacketBasedTCP/PBClient/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/PacketBasedTCP/PBClient/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/PacketBasedTCP/PBPacket/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/PacketBasedTCP/PBPacket/src/main/java/com/qing_guang/PacketBasedTCP/packet/PBPacket.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/PacketBasedTCP/PBPacket/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/PacketBasedTCP/PBServer/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/PacketBasedTCP/PBServer/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/PacketBasedTCP/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/PacketBasedTCP/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/Tokens" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/Tokens/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/Tokens/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Libs/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Plugins" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Plugins/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Plugins/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/RemoteCode/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/RemoteCode/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseClient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseClient/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehousePacket/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehousePacket/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/java/com/qing_guang/AccountWarehouse/server/data/DataService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/RemoteCode" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/RemoteCode/RemoteCodeClient/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/RemoteCode/RemoteCodeClient/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/RemoteCode/RemoteCodePacket/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/RemoteCode/RemoteCodePacket/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/RemoteCode/RemoteCodeServer/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/RemoteCode/RemoteCodeServer/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/RemoteCode/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/RemoteCode/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="GBK" />
+  </component>
+</project>
