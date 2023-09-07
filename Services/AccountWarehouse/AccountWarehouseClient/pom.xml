@@ -21,7 +21,7 @@
     <dependencies>
         <dependency>
             <groupId>com.qing_guang</groupId>
-            <artifactId>PBClient</artifactId>
+            <artifactId>AccountWarehousePacket</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>

@@ -22,38 +22,39 @@ public interface DataStoreSystem {
     boolean hasService(String name);
 
     /**
-     * 新注册一个服务
+     * 将新注册的服务在数据库中记录
      * @param name 服务名称
-     * @param adminPwd 此服务的管理员密码
+     * @param adminPwd 此服务的管理员密码(hash前)
      * @param authOrAcc 此服务使用的登录系统是认证系统(true,指只需要密码登录)还是账号系统(false,指需要账户名和密码)
      * @return 新注册的服务
-     * @throws ServiceCreateFailedException 当新服务注册失败时抛出
      */
-    UUID createService(String name, String adminPwd, boolean authOrAcc) throws ServiceCreateFailedException;
+    ServiceData deleteServiceData(
+            String name,
+            String adminPwd,
+            boolean authOrAcc
+    );
 
     /**
-     * 注销服务,若服务此时为正在使用状态应视为注销失败
+     * 在数据库中删除服务占据的数据
      * @param name 服务的名称
-     * @throws ServiceCreateFailedException 当服务注销失败时抛出
      */
-    void unregisterService(String name);
+    void removeServiceData(String name);
 
     /**
-     * 注销服务,若服务此时为正在使用状态应视为注销失败
+     * 在数据库中删除服务占据的数据
      * @param uid 服务的uid
-     * @throws ServiceCreateFailedException 当服务注销失败时抛出
      */
-    void unregisterService(UUID uid);
+    void removeServiceData(UUID uid);
 
     /**
-     * 通过名称获取服务
+     * 通过名称获取服务的数据
      * @param name 服务的名称
      * @return result
      */
     ServiceData getService(String name);
 
     /**
-     * 通过uid获取服务
+     * 通过uid获取服务的数据
      * @param uid 服务的uid
      * @return result
      */

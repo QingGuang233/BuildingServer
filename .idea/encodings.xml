@@ -35,6 +35,7 @@
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehousePacket/src/main/resources" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/java/com/qing_guang/AccountWarehouse/server/data/DataService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/java/com/qing_guang/AccountWarehouse/server/data/intf/DataStoreSystem.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/resources" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/src/main/java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/src/main/resources" charset="GBK" />
