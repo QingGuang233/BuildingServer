@@ -9,6 +9,18 @@ import java.util.UUID;
 public interface ServiceData {
 
     /**
+     * 此服务是否在线
+     * @return result
+     */
+    boolean isOnline();
+
+    /**
+     * 设置此服务的在线状态,当从在线变为离线时请收回所有的登录凭证
+     * @param isOnline
+     */
+    void setOnlineState(boolean isOnline);
+
+    /**
      * 获取此服务的名称
      * @return result
      */

@@ -34,7 +34,7 @@ public class PBSeverInfoHandler implements PBPacketHandler {
      * {@inheritDoc}
      */
     @Override
-    public void accept(PBPacket packet, boolean in) {
+    public boolean accept(PBPacket packet, boolean in) {
         PBPacketServerInfo pkt = (PBPacketServerInfo) packet;
         if(pkt.isForced()){
             handlerEn.helper.asymAlgorithm = pkt.getAsymAlgorithm();
@@ -48,6 +48,7 @@ public class PBSeverInfoHandler implements PBPacketHandler {
             }
             conn.sendPacket(new PBPacketAsym(pair.getPublic()));
         }
+        return true;
     }
 
     /**

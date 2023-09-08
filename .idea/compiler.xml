@@ -12,7 +12,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="AccountWarehouse" />
         <module name="RemoteCodePacket" />
         <module name="PBClient" />
         <module name="RemoteCodeServer" />
@@ -25,7 +24,6 @@
         <module name="PBPacket" />
         <module name="ICommandExecutor" />
         <module name="Plugins" />
-        <module name="Tokens" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -35,6 +33,7 @@
       <module name="Plugin" target="1.8" />
       <module name="TestCode" target="1.8" />
       <module name="TestCodeClient" target="1.8" />
+      <module name="Tokens" target="1.8" />
       <module name="YggdrasilServerImpl" target="1.5" />
     </bytecodeTargetLevel>
   </component>

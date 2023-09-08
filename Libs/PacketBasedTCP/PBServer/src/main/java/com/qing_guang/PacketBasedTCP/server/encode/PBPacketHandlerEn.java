@@ -28,17 +28,18 @@ public class PBPacketHandlerEn implements PBPacketHandler {
      * {@inheritDoc}
      */
     @Override
-    public void accept(PBClient client, PBPacket packet, boolean in) {
-        if(!in)
-            return;
-        if (packet instanceof PBPacketAsym){
-            KeyPair pair = helper.genAsym();
-            client.sendPacket(new PBPacketAsym(pair.getPublic()));
-            helper.asymPubs.put(client,((PBPacketAsym)packet).getKey());
-            helper.asymPris.put(client,pair.getPrivate());
-        }else{
-            helper.symKey.put(client,((PBPacketSym)packet).getKey());
+    public boolean accept(PBClient client, PBPacket packet, boolean in) {
+        if(in){
+            if (packet instanceof PBPacketAsym){
+                KeyPair pair = helper.genAsym();
+                client.sendPacket(new PBPacketAsym(pair.getPublic()));
+                helper.asymPubs.put(client,((PBPacketAsym)packet).getKey());
+                helper.asymPris.put(client,pair.getPrivate());
+            }else{
+                helper.symKey.put(client,((PBPacketSym)packet).getKey());
+            }
         }
+        return true;
     }
 
     /**

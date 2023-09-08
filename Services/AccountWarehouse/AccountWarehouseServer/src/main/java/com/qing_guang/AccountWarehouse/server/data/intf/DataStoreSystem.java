@@ -1,5 +1,6 @@
 package com.qing_guang.AccountWarehouse.server.data.intf;
 
+import java.io.IOException;
 import java.util.Collection;
 import java.util.UUID;
 
@@ -7,6 +8,18 @@ import java.util.UUID;
  * 数据库接口
  */
 public interface DataStoreSystem {
+
+    /**
+     * 开启数据库服务
+     * @throws IOException 当开启出现IO问题时抛出
+     */
+    void start() throws IOException;
+
+    /**
+     * 关闭数据库服务
+     *  @throws IOException 当关闭出现IO问题时抛出
+     */
+    void close() ;
 
     /**
      * 检查数据库中是否有指定uid的服务已被注册

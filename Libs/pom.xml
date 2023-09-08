@@ -12,7 +12,6 @@
 
     <modules>
         <module>ICommandExecutor</module>
-        <module>Tokens</module>
         <module>PacketBasedTCP</module>
     </modules>
 

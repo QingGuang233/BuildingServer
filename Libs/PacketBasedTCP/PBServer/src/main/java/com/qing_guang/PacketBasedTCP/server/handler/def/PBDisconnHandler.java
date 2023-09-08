@@ -20,11 +20,12 @@ public class PBDisconnHandler implements PBPacketHandler {
      * {@inheritDoc}
      */
     @Override
-    public void accept(PBClient client, PBPacket packet, boolean in) {
+    public boolean accept(PBClient client, PBPacket packet, boolean in) {
         if(in){
             PBPacketDisconn pkt = (PBPacketDisconn) packet;
             client.getServer().disconn(client, pkt.getReason(),pkt.getDescription());
         }
+        return true;
     }
 
     /**

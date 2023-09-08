@@ -13,7 +13,7 @@ public interface PBPacketHandler {
      * @param packet 数据包
      * @param in true为写入,false为写入
      */
-    void accept(PBPacket packet, boolean in);
+    boolean accept(PBPacket packet, boolean in);
 
     /**
      * 此监听器的优先级

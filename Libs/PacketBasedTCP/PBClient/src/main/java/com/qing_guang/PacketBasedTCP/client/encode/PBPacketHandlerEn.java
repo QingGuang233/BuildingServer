@@ -33,18 +33,19 @@ public class PBPacketHandlerEn implements PBPacketHandler {
      * {@inheritDoc}
      */
     @Override
-    public void accept(PBPacket packet, boolean in) {
-        if(!in)
-            return;
-        if (packet instanceof PBPacketAsym){
-            helper.asymPub = ((PBPacketAsym)packet).getKey();
-            helper.asymPri = temp;
-            byte[] symKey = helper.genSym();
-            conn.sendPacket(new PBPacketSym(symKey));
-            helper.symKey = symKey;
-        }else{
-            helper.symKey = ((PBPacketSym)packet).getKey();
+    public boolean accept(PBPacket packet, boolean in) {
+        if(in){
+            if (packet instanceof PBPacketAsym){
+                helper.asymPub = ((PBPacketAsym)packet).getKey();
+                helper.asymPri = temp;
+                byte[] symKey = helper.genSym();
+                conn.sendPacket(new PBPacketSym(symKey));
+                helper.symKey = symKey;
+            }else{
+                helper.symKey = ((PBPacketSym)packet).getKey();
+            }
         }
+        return true;
     }
 
     /**

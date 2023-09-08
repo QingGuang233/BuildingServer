@@ -75,7 +75,7 @@ public class PacketFormatter {
     }
 
     /**
-     * 注册一个数据包类型
+     * 注册一个数据包类型,并注册此数据包类型中包含的所有数据包
      * 接收的时候,如果一个被判断标识了ContainerOnly的字段(或者这个数据包都)没有找到无参构造器,那这个字段会跳过赋值(如果是数据包就返回PBPacketVoid)并发出警报
      * @param type 数据包类型
      * @throws IllegalArgumentException 当数据包类型写明包含的数据包中有没有注明属于此数据包类型或被检测到的类没有无参构造器时抛出
@@ -93,6 +93,9 @@ public class PacketFormatter {
                                 packetInfo.belongsTo().getName()
                 );
             }
+        }
+        for(Class<? extends PBPacket> packet : typeInfo.includes()){
+            PacketInfo packetInfo = packet.getAnnotation(PacketInfo.class);
             try{
                 reflectionAdd(packet);
             }catch (NoSuchMethodException e){

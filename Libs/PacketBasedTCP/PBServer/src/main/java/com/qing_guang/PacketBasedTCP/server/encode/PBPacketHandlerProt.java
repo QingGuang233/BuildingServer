@@ -9,7 +9,7 @@ import com.qing_guang.PacketBasedTCP.server.PBClient;
 import com.qing_guang.PacketBasedTCP.server.handler.PBPacketHandler;
 
 /**
- * 在完成密钥交换前就发送其它数据包或没有按流程交换密钥都会使客户端强制断线
+ * 在完成密钥交换前就发送其它数据包将忽略,没有按流程交换密钥会使客户端强制断线
  */
 public class PBPacketHandlerProt implements PBPacketHandler {
 
@@ -35,21 +35,23 @@ public class PBPacketHandlerProt implements PBPacketHandler {
      * {@inheritDoc}
      */
     @Override
-    public void accept(PBClient client, PBPacket packet, boolean in) {
+    public boolean accept(PBClient client, PBPacket packet, boolean in) {
         if(!in || !client.getServer().isForceEncode())
-            return;
+            return true;
         EncodeHelper helper = handler.helper;
         if(packet instanceof PBPacketSym && !helper.asymPubs.containsKey(client)){
             client.getServer().disconn(
                     client, PBPacketDisconn.DisconnReason.ENCRYPT,
                     "Unsafe process of encryption: asymmetric encryption should be available first"
             );
+            return false;
         }else if(
                 !(packet instanceof PBPacketSym) && !(packet instanceof PBPacketAsym) &&
                         (!helper.asymPubs.containsKey(client) || !helper.symKey.containsKey(client))
         ){
-            client.getServer().disconn(client, PBPacketDisconn.DisconnReason.ENCRYPT, "Encryption process isn't accomplished");
+            return false;
         }
+        return true;
     }
 
 }

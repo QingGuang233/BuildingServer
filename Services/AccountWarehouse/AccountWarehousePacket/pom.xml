@@ -5,8 +5,14 @@
         <groupId>com.qing_guang</groupId>
         <artifactId>AccountWarehouse</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../../../pom.xml</relativePath>
     </parent>
+    <dependencies>
+        <dependency>
+            <groupId>com.qing_guang</groupId>
+            <artifactId>PBPacket</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
     <artifactId>AccountWarehousePacket</artifactId>
     <name>Archetype - AccountWarehousePacket</name>
     <url>http://maven.apache.org</url>

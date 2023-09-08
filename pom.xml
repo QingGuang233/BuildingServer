@@ -12,10 +12,6 @@
         <module>Services</module>
         <module>Libs</module>
         <module>Plugins</module>
-        <module>Services/AccountWarehouse/AccountWarehousePacket</module>
-        <module>Services/AccountWarehouse/AccountWarehouseServer</module>
-        <module>Services/AccountWarehouse/AccountWarehouseLoginClient</module>
-        <module>Services/AccountWarehouse/AccountWarehouseOpClient</module>
     </modules>
 
     <properties>

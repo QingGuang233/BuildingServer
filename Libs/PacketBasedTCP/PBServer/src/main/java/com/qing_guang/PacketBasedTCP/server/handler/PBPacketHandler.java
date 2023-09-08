@@ -14,8 +14,9 @@ public interface PBPacketHandler {
      * @param client 客户端
      * @param packet 数据包
      * @param in true为写入,false为写入
+     * @return 此数据包是否应该交给剩下的监听器处理
      */
-    void accept(PBClient client,PBPacket packet,boolean in);
+    boolean accept(PBClient client,PBPacket packet,boolean in);
 
     /**
      * 此监听器的优先级

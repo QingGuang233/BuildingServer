@@ -2,14 +2,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.qing_guang</groupId>
         <artifactId>AccountWarehouse</artifactId>
+        <groupId>com.qing_guang</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../../../pom.xml</relativePath>
     </parent>
     <artifactId>AccountWarehouseServer</artifactId>
-    <name>Archetype - AccountWarehouseServer</name>
-    <url>http://maven.apache.org</url>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
 
     <dependencies>
         <dependency>

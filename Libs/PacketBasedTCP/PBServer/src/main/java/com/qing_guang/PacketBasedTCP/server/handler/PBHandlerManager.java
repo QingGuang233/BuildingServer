@@ -121,14 +121,26 @@ public class PBHandlerManager {
             }
         }
 
-        for (PBHandlePriority priority : PRIORITIES) {
-            if(clazz != null)
-                clazz.get(priority).forEach(handler -> handler.accept(client, packet, in));
-            for(Class<? extends PBPacketType> typeClass : types){
-                Map<PBHandlePriority,Set<PBPacketHandler>> type = handlersType.get(typeClass);
-                type.get(priority).forEach(handler -> handler.accept(client,packet, in));
+        a: for (PBHandlePriority priority : PRIORITIES) {
+            if(clazz != null){
+                for(PBPacketHandler handler : clazz.get(priority)){
+                    if(!handler.accept(client, packet, in)){
+                        break a;
+                    }
+                }
             }
-            handlersAll.get(priority).forEach(handler -> handler.accept(client, packet, in));
+            for(Class<? extends PBPacketType> typeClass : types){
+                for(PBPacketHandler handler : handlersType.get(typeClass).get(priority)){
+                    if(!handler.accept(client, packet, in)){
+                        break a;
+                    }
+                }
+            }
+            for(PBPacketHandler handler : handlersAll.get(priority)){
+                if(!handler.accept(client, packet, in)){
+                    break a;
+                }
+            }
         }
 
     }
