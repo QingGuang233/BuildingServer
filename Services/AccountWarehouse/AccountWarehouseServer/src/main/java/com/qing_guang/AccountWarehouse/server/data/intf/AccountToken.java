@@ -27,6 +27,11 @@ public interface AccountToken {
      * 返回此令牌的有效期(截止时间)(单位ms)
      * @return result
      */
-    long vaildTime();
+    long validTime();
+
+    /**
+     * 使此令牌提前失效
+     */
+    void invalidateInAdvance();
 
 }

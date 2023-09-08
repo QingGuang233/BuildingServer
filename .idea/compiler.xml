@@ -4,6 +4,8 @@
     <excludeFromCompile>
       <directory url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehousePacket/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseLoginClient/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseOpClient/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -14,18 +16,20 @@
         <module name="RemoteCodePacket" />
         <module name="PBClient" />
         <module name="RemoteCodeServer" />
+        <module name="AccountWarehouseLoginClient" />
+        <module name="AccountWarehouseOpClient" />
         <module name="AccountWarehouseServer" />
         <module name="AccountWarehousePacket" />
         <module name="PBServer" />
         <module name="RemoteCodeClient" />
         <module name="PBPacket" />
-        <module name="AccountWarehouseClient" />
         <module name="ICommandExecutor" />
         <module name="Plugins" />
         <module name="Tokens" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="AccountWarehouseClient" target="1.8" />
       <module name="CommandExecutor" target="1.8" />
       <module name="CommandHandleHelper" target="8" />
       <module name="Plugin" target="1.8" />

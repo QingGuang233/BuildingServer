@@ -3,25 +3,18 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.qing_guang</groupId>
-        <artifactId>AccountWarehouse</artifactId>
+        <artifactId>BuildingServer</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../../../pom.xml</relativePath>
     </parent>
-    <artifactId>AccountWarehouseServer</artifactId>
-    <name>Archetype - AccountWarehouseServer</name>
-    <url>http://maven.apache.org</url>
-
     <dependencies>
         <dependency>
             <groupId>com.qing_guang</groupId>
-            <artifactId>AccountWarehousePacket</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.qing_guang</groupId>
-            <artifactId>PBServer</artifactId>
+            <artifactId>PBClient</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
+    <artifactId>AccountWarehouseLoginClient</artifactId>
+    <name>Archetype - AccountWarehouseLoginClient</name>
+    <url>http://maven.apache.org</url>
 </project>

@@ -1,5 +1,6 @@
 package com.qing_guang.AccountWarehouse.server.data.intf;
 
+import java.util.Collection;
 import java.util.UUID;
 
 /**
@@ -41,23 +42,23 @@ public interface DataStoreSystem {
     void removeServiceData(String name);
 
     /**
-     * 在数据库中删除服务占据的数据
-     * @param uid 服务的uid
-     */
-    void removeServiceData(UUID uid);
-
-    /**
-     * 通过名称获取服务的数据
-     * @param name 服务的名称
-     * @return result
-     */
-    ServiceData getService(String name);
-
-    /**
      * 通过uid获取服务的数据
      * @param uid 服务的uid
      * @return result
      */
     ServiceData getService(UUID uid);
+
+    /**
+     * 通过uid获取临时认证令牌,若数据库中未检索到令牌信息则返回null
+     * @param uid 认证令牌的uid
+     * @return result
+     */
+    AccountToken getToken(UUID uid);
+
+    /**
+     * 获取数据库中所有还留存在记录的(包括已失效的)认证令牌
+     * @return result
+     */
+    Collection<AccountToken> allTokens();
 
 }

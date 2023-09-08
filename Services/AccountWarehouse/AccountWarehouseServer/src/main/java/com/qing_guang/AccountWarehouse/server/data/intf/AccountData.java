@@ -1,5 +1,6 @@
 package com.qing_guang.AccountWarehouse.server.data.intf;
 
+import java.util.Collection;
 import java.util.UUID;
 
 /**
@@ -74,5 +75,33 @@ public interface AccountData {
      * @return result
      */
     AccountToken allocateAccToken(long time,boolean ddlOrFixt);
+
+    /**
+     * 获取数据库中该账户所有还留存在记录的(包括已失效的)认证令牌
+     * @return result
+     */
+    Collection<AccountToken> allTokens();
+
+    /**
+     * 获取该账户上次成功登录的时间戳
+     * @return result
+     */
+    long lastLogin();
+
+    /**
+     * 获取该账户从上次成功登录后登录失败的次数
+     * @return result
+     */
+    int failedTimes();
+
+    /**
+     * 设置该账户从上次成功登录后登录失败的次数
+     */
+    void setFailedTimes();
+
+    /**
+     * 注销账号
+     */
+    void unregister();
 
 }

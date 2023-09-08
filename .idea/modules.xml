@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AccountWarehouseClient.iml" filepath="$PROJECT_DIR$/AccountWarehouseClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccountWarehousePacket.iml" filepath="$PROJECT_DIR$/AccountWarehousePacket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccountWarehouseServer.iml" filepath="$PROJECT_DIR$/AccountWarehouseServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/Libs/ICommandExecutor/ICommandExecutor.iml" filepath="$PROJECT_DIR$/Libs/ICommandExecutor/ICommandExecutor.iml" />
     </modules>
   </component>

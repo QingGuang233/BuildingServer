@@ -5,7 +5,6 @@ import com.qing_guang.PacketBasedTCP.client.encode.PBPacketHandlerEn;
 import com.qing_guang.PacketBasedTCP.client.handler.PBHandlerManager;
 import com.qing_guang.PacketBasedTCP.client.handler.def.PBDisconnHandler;
 import com.qing_guang.PacketBasedTCP.packet.PBPacket;
-import com.qing_guang.PacketBasedTCP.packet.PBPacketAnalyser;
 import com.qing_guang.PacketBasedTCP.packet.def.*;
 import com.qing_guang.PacketBasedTCP.packet.format.PacketFormatter;
 
@@ -15,7 +14,6 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
-import java.util.*;
 
 /**
  * 代表一个连接
@@ -28,7 +26,6 @@ public class PBConnection {
 
     private Selector receive;
     private PBHandlerManager handlerManager;
-    private Map<Integer, PBPacketAnalyser> analysers;
     private PBPacketHandlerEn handlerEn;
     private PacketFormatter formatter;
 
@@ -56,7 +53,6 @@ public class PBConnection {
         channel = SocketChannel.open(new InetSocketAddress(ip,port));
         receive = Selector.open();
         handlerManager = new PBHandlerManager();
-        analysers = new HashMap<>();
         handlerEn = new PBPacketHandlerEn();
         formatter = new PacketFormatter();
 
@@ -69,27 +65,6 @@ public class PBConnection {
 
         while(!channel.finishConnect());
 
-    }
-
-    /**
-     * 添加一个数据包解析器
-     * @param analyser 数据包解析器
-     * @param packetIDs 此解析器可以解析的数据包ID
-     */
-    public void addPacketAnalyser(PBPacketAnalyser analyser,int... packetIDs){
-        for(int packetID : packetIDs){
-            if(!analysers.containsKey(packetID)){
-                analysers.put(packetID,analyser);
-            }
-        }
-    }
-
-    /**
-     * 删除一个数据包ID对应的解析器
-     * @param packetID 数据包ID
-     */
-    public void removePacketAnalyser(int packetID){
-        analysers.remove(packetID);
     }
 
     /**

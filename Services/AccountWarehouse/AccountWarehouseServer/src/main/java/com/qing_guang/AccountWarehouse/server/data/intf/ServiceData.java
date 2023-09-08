@@ -1,5 +1,6 @@
 package com.qing_guang.AccountWarehouse.server.data.intf;
 
+import java.util.Collection;
 import java.util.UUID;
 
 /**
@@ -78,6 +79,13 @@ public interface ServiceData {
     AccountData getAccountByEmail(String email);
 
     /**
+     * 通过用户名找到账号数据
+     * @param username 用户名
+     * @return 找到的账号数据,如果未找到返回null
+     */
+    AccountData getAccountByUsername(String username);
+
+    /**
      * 创建一个账户
      * @param username 用户名
      * @param pwd 密码(hash前)
@@ -86,17 +94,6 @@ public interface ServiceData {
      * @return result
      */
     AccountData createAccount(String username,String pwd,String phoneNumber,String email);
-
-    /**
-     * 获取管理员密码(hash后)
-     * @return result
-     */
-    String getAdminPwd();
-
-    /**
-     * 设置管理员密码(hash前)
-     */
-    void setAdminPwd();
 
     /**
      * 生成一份指定账户的临时认证令牌
@@ -108,10 +105,32 @@ public interface ServiceData {
     AccountToken allocateAccToken(AccountData data, long time, boolean ddlOrFixt);
 
     /**
-     * 通过uid获取临时认证令牌,若数据库中未检索到令牌信息则返回null
-     * @param uid 认证令牌的uid
+     * 获取数据库中此服务所有还留存在记录的(包括已失效的)认证令牌
      * @return result
      */
-    AccountToken getToken(UUID uid);
+    Collection<AccountToken> allTokens();
+
+    /**
+     * 此服务是否允许同一个账户同时有多个可用的认证令牌
+     * @return result
+     */
+    boolean isMultiTokenAllowed();
+
+    /**
+     * 设置此服务是否允许同一个账户同时有多个可用的认证令牌
+     * @param isMultiTokenAllowed 此服务是否允许同一个账户同时有多个可用的认证令牌
+     */
+    void setMultiTokenAllowed(boolean isMultiTokenAllowed);
+
+    /**
+     * 获取服务中所有已注册的账户
+     * @return result
+     */
+    Collection<AccountData> getAccounts();
+
+    /**
+     * 注销此服务
+     */
+    void removeData();
 
 }

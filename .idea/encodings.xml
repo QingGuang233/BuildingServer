@@ -31,9 +31,14 @@
     <file url="file://$PROJECT_DIR$/Services" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseClient/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseClient/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseLoginClient/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseLoginClient/src/main/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseOpClient/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseOpClient/src/main/resources" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehousePacket/src/main/java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehousePacket/src/main/resources" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/java/com/qing_guang/AccountWarehouse/server/AccountServer.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/java/com/qing_guang/AccountWarehouse/server/data/DataService.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/java/com/qing_guang/AccountWarehouse/server/data/intf/DataStoreSystem.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Services/AccountWarehouse/AccountWarehouseServer/src/main/resources" charset="GBK" />

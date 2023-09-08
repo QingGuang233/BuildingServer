@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 标识类内需要打包发送的字段
+ * 标识类内需要打包发送的字段(若发送时此字段的数据为null则跳过该数据)
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
